@@ -1,0 +1,93 @@
+/* Основні стилі сторінки */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Контейнер калькулятора */
+.calculator {
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Екран калькулятора */
+.display {
+    background-color: #333;
+    color: #ffffff;
+    font-size: 2em;
+    padding: 25px;
+    text-align: right;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* Кнопки калькулятора */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+}
+
+/* Стиль кожної кнопки */
+button {
+    padding: 20px;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Базовий стиль кнопок */
+button {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+/* Спеціальні стилі для кнопок операторів */
+button:nth-child(4n),
+button.equal {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: #ffffff;
+}
+
+button.equal {
+    grid-column: span 1;
+    font-weight: bold;
+}
+
+/* Стилі для кнопок дій, як % та 1/x */
+button:nth-child(-n+4),
+button:nth-child(5),
+button:nth-child(6),
+button:nth-child(7),
+button:nth-child(8) {
+    background-color: #f0f4f8;
+    color: #666;
+}
+
+/* Ефект натискання */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Ефект при наведенні */
+button:hover {
+    background-color: #d1d1d1;
+}
+
+/* Тінь для натискання */
+button:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+}
